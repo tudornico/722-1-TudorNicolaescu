@@ -38,9 +38,18 @@ public class ProduktRepo implements ICRUDRepo<Produkt>{
     }
 
     @Override
-
+    /**
+     * we are going to update the price
+     */
     public Produkt update(Produkt obj) {
-        return null;
+        for (Produkt produce: this.produkts
+             ) {
+           if(produce.getName().equals(obj.getName()))
+           {
+               produce.setPreis(obj.getPreis());
+           }
+        }
+        return obj;
     }
 
     @Override
@@ -54,8 +63,8 @@ public class ProduktRepo implements ICRUDRepo<Produkt>{
                 this.produkts.remove(produce);
             }
             else
-            {
-                produce.setAnzahl(produce.getAnzahl() - obj.getAnzahl());
+            {   int difference =  produce.getAnzahl() - obj.getAnzahl();
+                produce.setAnzahl(difference);
             }
         }
     }

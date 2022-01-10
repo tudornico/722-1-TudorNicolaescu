@@ -25,4 +25,8 @@ public class ProduktController {
     public void delete(Produkt obj){
         this.repo.delete(obj);
     }
+
+    public Produkt findByName(String name) throws Exception {
+       return this.repo.findByName(name);
+    }
 }

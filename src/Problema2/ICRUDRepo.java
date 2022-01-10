@@ -29,7 +29,7 @@ public interface ICRUDRepo<T> {
 
     /**
      * function that deletes the object of type T from our repository list
-     * @param obj
+     * @param obj the object we want deleted
      */
     void delete(T obj);
 }

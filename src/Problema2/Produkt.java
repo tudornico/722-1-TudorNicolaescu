@@ -1,6 +1,6 @@
 package Problema2;
 
-class Produkt{
+public class Produkt{
     public String Name;
     public int Preis;
     public int SKU;
@@ -42,7 +42,7 @@ class Produkt{
     }
 
     public void setAnzahl(int anzahl) {
-        anzahl = anzahl;
+        this.anzahl = anzahl;
     }
 
     @Override
